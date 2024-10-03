@@ -1,0 +1,149 @@
+.buttons {
+  margin-top: 1em;
+  display: flex;
+}
+
+button {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  margin-right: 1em;
+
+  border-radius: 0.5em;
+}
+
+button#submit {
+  background-color: #50bf5bCF;
+}
+
+button#submit:hover {
+  background-color: #50bf5b;
+}
+
+button#cancel {
+  background-color: #fa5c6eCF;
+}
+
+button#cancel:hover {
+  background-color: #fa5c6e;
+}
+
+button.clear {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+
+  margin: 0px;
+
+  background-color: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.2);
+
+  display: inline-flex;
+}
+button.clear:hover {
+  background-color: rgba(0,0,0,0.1);
+  border-color: rgb(0,0,0,0.3);
+}
+
+.form {
+  padding-left: 0.5em;
+  width: auto;
+  height: auto;
+}
+
+#selection-links {
+  margin-left: 1.5em;
+}
+
+#selection-links > a {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+div#quantity-group {
+  display: flex;
+  justify-content: left;
+}
+
+div#quantity-group > div {
+  margin-right: 3em;
+}
+
+input[type="file"][name="picture"] {
+  width: 14em;
+  height: 2em;
+}
+
+label {
+  margin-top: 0.5em;
+  display: block;
+}
+
+.labelled {
+  margin-top: 0.3em;
+}
+
+input {
+  width: 20em;
+  height: 1.5em;
+}
+
+input[type="number"] {
+  width: 5em;
+}
+
+select {
+  width: 20em;
+  height: 2em;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+  width: auto;
+  display: table-row;
+}
+
+main > #main-wrapper {
+  padding-left: 16px;
+}
+
+footer {
+  width: 100%;
+  height: 5em;
+  background-color: rgba(0,0,0,0.5);
+  display: table-row;
+}
+
+footer > div#footer-wrapper {
+  width: fit-content;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: left; 
+}
+header > a {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2em;
+}
+
+img#header-logo {
+  width: 5em;
+  height: 5em;
+  padding: 8px;
+}
