@@ -17,6 +17,10 @@
       <h1>Edit NCR Report</h1>
       <form class="form">
         <div id="form-group-wrapper">
+          <div class="form-group" id="ncrNumber-group">
+            <label for="ncrNumber">NCR Number</label>
+            <input class="labelled" value="1" type="text" id="ncrNumber" name="ncrNumber" disabled>
+          </div>
           <div class="form-group" id="product-group">
             <label for="product">Select defective product</label>
             <input class="labelled" value="Product1" type="text" id="product" name="product" required>
@@ -51,7 +55,7 @@
         </div>
         <div class="buttons">
           <button id="submit" type="submit">✓ Submit</button>
-          <button id="cancel" type="button" onclick="location.href = '../menu.html'">✕ Cancel</button>
+          <button id="cancel" type="button" onclick="location.href = 'view.html'">✕ Cancel</button>
         </div>
       </form>
     </div>
