@@ -8,3 +8,5 @@ green: #50bf5bCF
 green hover: #50bf5b
 red: #fa5c6eCF
 red hover: #fa5c6e
+
+back arrow: ←
