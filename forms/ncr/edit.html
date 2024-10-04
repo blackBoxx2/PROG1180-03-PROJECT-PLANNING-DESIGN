@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <title>Create New NCR</title>
+</head>
+<body>
+  <header>
+    <img id="header-logo" src="../../assets/img/logo.png" alt="business logo">
+    <a href="../../index.html">Home</a>
+    <a href="../menu.html">NCR Forms</a>
+  </header>
+  <main>
+    <div id="main-wrapper">
+      <h1>New NCR Report</h1>
+      <form class="form">
+        <div id="form-group-wrapper">
+          <div class="form-group" id="product-group">
+            <label for="product">Select defective product</label>
+            <input class="labelled" value="Product1" type="text" id="product" name="product" required>
+            <button class="clear" type="button">✕ Clear</button>
+          </div>
+          <div class="form-group" id="defect-group">
+            <label for="defect">Select type of defect</label>
+            <select class="labelled" id="defect" name="defect" required>
+              <option value="" disabled>Pick defect</option>
+              <hr>
+              <option>Option 1</option>
+              <option selected>Option 2</option>
+            </select>
+            <button class="clear" type="button">✕ Clear</button>
+          </div>
+          <div class="form-group" id="quantity-group">
+            <div>
+              <label for="total-quantity">Total quantity ordered:</label>
+              <input class="labelled" type="number" min="1" value="100" id="total-quantity" name="total-quantity" required>
+              <button class="clear" type="button">✕ Clear</button>
+            </div>
+            <div>
+              <label for="defective-quantity">Defective quantity:</label>
+              <input class="labelled" type="number" min="1" value="5" id="defective-quantity" name="defective-quantity" required>
+              <button class="clear" type="button">✕ Clear</button>
+            </div>
+          </div>
+          <div class="form-group" id="picture-group">
+            <label for="picture">Picture of defect</label>
+            <input type="file" oninput="this.style.width=this.value.length+'ch'" accept="image/png, image/jpeg" class="labelled" id="picture" name="picture" required>
+            <button class="clear" type="button">✕ Clear</button>
+        </div>
+        <div class="buttons">
+          <button id="submit" type="submit">✓ Submit</button>
+          <button id="cancel" type="button" onclick="location.href = '../menu.html'">✕ Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div id="footer-wrapper">
+      <p>developed by BlackBox</p>
+    </div>
+  </footer>
+</body>
+</html>
