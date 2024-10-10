@@ -14,19 +14,19 @@ button {
   border-radius: 0.5em;
 }
 
-button#submit {
+button#submit, button#submit-edit {
   background-color: #50bf5bCF;
 }
 
-button#submit:hover {
+button#submit:hover, button#submit-edit:hover {
   background-color: #50bf5b;
 }
 
-button#cancel {
+button#cancel, button#cancel-edit {
   background-color: #fa5c6eCF;
 }
 
-button#cancel:hover {
+button#cancel:hover, button#cancel-edit:hover {
   background-color: #fa5c6e;
 }
 
@@ -145,11 +145,12 @@ td > * {
   margin: auto;
 }
 
-#back-button {
+#back-button-wrapper {
   display: block;
   margin-left: 2em;
   padding-bottom: 2em;
 }
+
 
 footer {
   width: 100%;
@@ -177,6 +178,34 @@ img#header-logo {
   width: 5em;
   height: 5em;
   padding: 8px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 14pt;
+  color: red;
+}
+
+p.required {
+  color: red;
+  display: inline;
+  margin-left: 0.1em;
+}
+
+#cb-overwrite-photo {
+  width: 2em;
+  display: inline;
+}
+
+#picture-group {
+  display: flex;
+  flex-direction: row;
+}
+#cb-wrapper {
+  margin-top: 1.5em;
+}
+#cb-overwrite-photo + label {
+  display: inline;
 }
 
 /* Toast */

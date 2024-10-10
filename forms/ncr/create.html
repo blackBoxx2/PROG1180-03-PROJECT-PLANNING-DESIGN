@@ -10,52 +10,60 @@
   <header>
     <img id="header-logo" src="/assets/img/logo.png" alt="business logo">
     <a href="/index.html">Home</a>
-    <a href="/forms/menu.html">NCR Forms</a>
+    <a href="/forms/menu.html">Quality Rep</a>
   </header>
   <main>
     <div id="main-wrapper">
       <h1>New NCR Report</h1>
       <form class="form">
+        <h2>* indicates a required field</h2>
         <div id="form-group-wrapper">
           <div class="form-group" id="ncrNumber-group">
             <label for="ncrNumber">NCR Number</label>
             <input class="labelled" value="1" type="text" id="ncrNumber" name="ncrNumber" disabled>
           </div>
           <div class="form-group" id="product-group">
-            <label for="product">Select defective product</label>
+            <label for="product">Select defective product<p class="required">*</p></label>
             <input class="labelled" type="text" id="product" name="product" required>
             <button class="clear" type="button">✕ Clear</button>
           </div>
           <div class="form-group" id="defect-group">
-            <label for="defect">Select type of defect</label>
+            <label for="defect">Select type of defect<p class="required">*</p></label>
             <select class="labelled" id="defect" name="defect" required>
-              <option value="" disabled selected>Pick defect</option>
-              <hr>
-              <option>Option 1</option>
-              <option>Option 2</option>
+              <option value="" disabled selected>Defect not selected</option>
+              <option disabled>─────────────────────────</option>
+              <option>Defect 1</option>
+              <option>Defect 2</option>
             </select>
             <button class="clear" type="button">✕ Clear</button>
           </div>
           <div class="form-group" id="quantity-group">
             <div>
-              <label for="total-quantity">Total quantity ordered:</label>
+              <label for="total-quantity">Total quantity ordered<p class="required">*</p></label>
               <input class="labelled" type="number" min="1" value="1" id="total-quantity" name="total-quantity" required>
               <button class="clear" type="button">✕ Clear</button>
             </div>
             <div>
-              <label for="defective-quantity">Defective quantity:</label>
+              <label for="defective-quantity">Defective quantity<p class="required">*</p></label>
               <input class="labelled" type="number" min="1" value="1" id="defective-quantity" name="defective-quantity" required>
               <button class="clear" type="button">✕ Clear</button>
             </div>
           </div>
-          <div class="form-group" id="picture-group">
-            <label for="picture">Picture of defect</label>
-            <input type="file" oninput="this.style.width=this.value.length+'ch'" accept="image/png, image/jpeg" class="labelled" id="picture" name="picture" required>
+          <div class="form-group" id="order-number-group">
+            <label for="order-number">Order number<p class="required">*</p></label>
+            <input class="labelled" type="text" id="order-number" name="order-number" required>
             <button class="clear" type="button">✕ Clear</button>
-        </div>
-        <div class="buttons">
-          <button id="submit" type="submit">✓ Submit</button>
-          <button id="cancel" type="button">✕ Cancel</button>
+          </div>
+          <div class="form-group" id="picture-group">
+            <div>
+              <label for="picture">Picture of defect<p class="required">*</p></label>
+              <input type="file" oninput="this.style.width=this.value.length+'ch'" accept="image/png, image/jpeg" class="labelled" id="picture" name="picture" required>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="submit" type="submit">✓ Submit</button>
+            <button id="cancel" type="button">✕ Cancel</button>
+          </div>
         </div>
       </form>
     </div>
