@@ -10,7 +10,7 @@
   <header>
     <img id="header-logo" src="/assets/img/logo.png" alt="business logo">
     <a href="/index.html">Home</a>
-    <a href="/forms/menu.html">NCR Forms</a>
+    <a href="/forms/menu.html">Quality Rep</a>
   </header>
   <main>
     <div id="main-wrapper">
@@ -30,9 +30,9 @@
             <label for="defect">Select type of defect</label>
             <select class="labelled" id="defect" name="defect" required>
               <option value="" disabled>Pick defect</option>
-              <hr>
-              <option>Option 1</option>
-              <option selected>Option 2</option>
+              <option disabled>─────────────────────────</option>
+              <option>Defect 1</option>
+              <option selected>Defect 2</option>
             </select>
             <button class="clear" type="button">✕ Clear</button>
           </div>
@@ -52,10 +52,11 @@
             <label for="picture">Picture of defect</label>
             <input type="file" oninput="this.style.width=this.value.length+'ch'" accept="image/png, image/jpeg" class="labelled" id="picture" name="picture" required>
             <button class="clear" type="button">✕ Clear</button>
-        </div>
-        <div class="buttons">
-          <button id="submit" type="submit">✓ Submit</button>
-          <button id="cancel" type="button">✕ Cancel</button>
+          </div>
+          <div class="buttons">
+            <button id="submit-edit" type="submit">✓ Submit</button>
+            <button id="cancel-edit" type="button">✕ Cancel</button>
+          </div>
         </div>
       </form>
     </div>
