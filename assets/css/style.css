@@ -186,9 +186,8 @@ h2 {
   color: red;
 }
 
-p.required {
+span.required {
   color: red;
-  display: inline;
   margin-left: 0.1em;
 }
 
@@ -204,6 +203,7 @@ p.required {
 #cb-wrapper {
   margin-top: 1.5em;
 }
+
 #cb-overwrite-photo + label {
   display: inline;
 }
