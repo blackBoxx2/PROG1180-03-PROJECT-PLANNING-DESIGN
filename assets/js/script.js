@@ -35,8 +35,13 @@ const showToast = (
 
 let submit = 
     document.getElementById("submit");
+let submitEdit = 
+    document.getElementById("submit-edit");
 let failed = 
     document.getElementById("cancel");
+let failedEdit =
+    document.getElementById("cancel-edit");
+
 if(submit){
     submit.addEventListener("click",(e) => {
         e.preventDefault();
@@ -46,12 +51,30 @@ if(submit){
     });
 }
 
+if(submitEdit){
+    submitEdit.addEventListener("click",(e) => {
+        e.preventDefault();
+        localStorage.setItem('message', 'Successfully edited NCR')
+        localStorage.setItem('toastType', 'success')
+        window.location.href = "./view.html";
+    });
+}
+
 if(failed){
     failed.addEventListener("click",(e) => {
         e.preventDefault();
         localStorage.setItem('message', 'Successfully canceled NCR')
         localStorage.setItem('toastType', 'danger')
         window.location.href = "/forms/menu.html";
+    });
+}
+
+if(failedEdit){
+    failedEdit.addEventListener("click",(e) => {
+        e.preventDefault();
+        localStorage.setItem('message', 'Successfully canceled NCR edit')
+        localStorage.setItem('toastType', 'danger')
+        window.location.href = "./view.html";
     });
 }
 
