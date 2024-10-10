@@ -180,6 +180,34 @@ img#header-logo {
   padding: 8px;
 }
 
+h2 {
+  font-weight: 300;
+  font-size: 14pt;
+  color: red;
+}
+
+p.required {
+  color: red;
+  display: inline;
+  margin-left: 0.1em;
+}
+
+#cb-overwrite-photo {
+  width: 2em;
+  display: inline;
+}
+
+#picture-group {
+  display: flex;
+  flex-direction: row;
+}
+#cb-wrapper {
+  margin-top: 1.5em;
+}
+#cb-overwrite-photo + label {
+  display: inline;
+}
+
 /* Toast */
 #toast-container{
   position: fixed;
