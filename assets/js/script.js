@@ -18,21 +18,33 @@ let submitEdit = document.getElementById("submit-edit");
 let failed = document.getElementById("cancel");
 let failedEdit =document.getElementById("cancel-edit");
 //Clear Buttons
-btnDeleteProduct.addEventListener('click', function(){
-    productText.value = '';
-})
-btnDeleteDefect.addEventListener('click', function(){
-    defectLabel.value = '';
-})
-btntotalQuantityText.addEventListener('click', function(){
+if(btnDeleteProduct != null){
+    btnDeleteProduct.addEventListener('click', function(){
+        productText.value = '';
+    })
+}
+if(btnDeleteDefect != null){
+    btnDeleteDefect.addEventListener('click', function(){
+        defectLabel.value = '';
+    })
+}
+if(btntotalQuantityText != null){
+    btntotalQuantityText.addEventListener('click', function(){
     totalQuantityText.value = '';
-})
-btnDeleteDefectiveQuantity.addEventListener('click', function(){
+    })
+}
+
+if(btnDeleteDefectiveQuantity != null){
+    btnDeleteDefectiveQuantity.addEventListener('click', function(){
     defectiveQuantityText.value = '';
-})
-btnDeleteOrderNumber.addEventListener('click', function(){
+    })
+}
+if(btnDeleteOrderNumber != null){
+
+    btnDeleteOrderNumber.addEventListener('click', function(){
     orderNumber.value = '';
-})
+    })
+}
 //Regex text
 function validRegexText(p){
     const regexOnlyLetters = /^[a-zA-Z]+$/;
@@ -83,16 +95,21 @@ const showToast = (
 if(submit){
     submit.addEventListener("click",(e) => {
         if(productText.value == ''  || defectLabel.value == '' || totalQuantityText.value == '' || defectiveQuantityText.value == '' || Picture.value == '' || orderNumber.value == ''){
-            alert('You have something missing');
-        }else if(!validRegexText(productText.value)){
+            alert('You have something missing');  
+            return;  
+        } else if(!validRegexText(productText.value)){
             alert('Please enter a valid type of letters in the product input');
             productText.value = '';
-        }else if(!validRegexNumbers(orderNumber.value)){
+            return;
+        } else if(!validRegexNumbers(orderNumber.value)){
             alert('Please enter a valid type of numbers in the order number input')
             orderNumber.value = '';
+            return;
         }
-        localStorage.setItem('message', 'Successfully submitted NCR')
-        localStorage.setItem('toastType', 'success')
+            e.preventDefault();
+            localStorage.setItem('message', 'Successfully submitted NCR')
+            localStorage.setItem('toastType', 'success')
+            window.location.href = "../menu.html";     
     });
 }
 //Validation for the edit
@@ -100,17 +117,23 @@ if(submitEdit){
             submitEdit.addEventListener("click",(e) => {
             if(productText.value == ''  || defectLabel.value == '' || totalQuantityText.value == '' || defectiveQuantityText.value == '' || Picture.value == '' || orderNumber.value == ''){
                 alert('You have something missing');
-              
+                e.preventDefault();
+            return;
             }else if(!validRegexText(productText.value)){
                 alert('Please enter a valid type of letters in the product input');
                 productText.value = '';
+                e.preventDefault();
+            return;
             }else if(!validRegexNumbers(orderNumber.value)){
                 alert('Please enter a valid type of numbers in the order number input')
                 orderNumber.value = ''; 
+                e.preventDefault();
+            return;
             }
+                e.preventDefault()
                 localStorage.setItem('message', 'Successfully submitted NCR')
                 localStorage.setItem('toastType', 'success')
-                //window.location.href = "/forms/menu.html";
+                window.location.href = "../../forms/menu.html";
 
         }        
     );
